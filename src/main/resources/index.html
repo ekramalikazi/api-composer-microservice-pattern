@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bold-font {
+            font-weight: bold;
+        }
+
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2 class="text-muted">Spring Boot and Server Events Tutorial Using Webflux</h2>
+    <table class="table table-striped" id="gameOfThrones">
+        <thead>
+        <tr>
+            <th class="bold-font">House</th>
+            <th class="bold-font">Character</th>
+            <th class="bold-font">Dragon</th>
+            <th class="bold-font">City</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="gameOfThrone : ${gameOfThrones}">
+            <td>[[${gameOfThrone.house}]]</td>
+            <td>[[${gameOfThrone.character}]]</td>
+            <td>[[${gameOfThrone.dragon}]]</td>
+            <td>[[${gameOfThrone.city}]]</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script data-th-src="@{/js/main.js}"></script>
+
+</body>
+
+</html>
