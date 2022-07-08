@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bold-font {
+            font-weight: bold;
+        }
+
+        th, td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2 class="text-muted">Spring Boot and Server Events Using Webflux</h2>
+    <table class="table table-striped" id="results">
+        <thead>
+        <tr>
+            <th class="bold-font">Post Id</th>
+            <th class="bold-font">Post Title</th>
+            <th class="bold-font">Post Content</th>
+            <th class="bold-font">Tweet Id</th>
+            <th class="bold-font">Tweet Title</th>
+            <th class="bold-font">Tweet Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr data-th-each="r : ${results}">
+            <td>[[${r.postId}]]</td>
+            <td>[[${r.postTitle}]]</td>
+            <td>[[${r.postContent}]]</td>
+            <td>[[${r.tweetId}]]</td>
+            <td>[[${r.tweetTitle}]]</td>
+            <td>[[${r.tweetDescription}]]</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script data-th-src="@{/js/main.js}"></script>
+
+</body>
+
+</html>
