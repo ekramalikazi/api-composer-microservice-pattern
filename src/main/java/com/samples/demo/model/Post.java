@@ -12,7 +12,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @Table("posts")
 public class Post {
-    
+
     @Id
     @Column("id")
     private Integer id;
@@ -22,5 +22,5 @@ public class Post {
 
     @Column("content")
     private String content;
-    
+
 }

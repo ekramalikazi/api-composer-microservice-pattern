@@ -12,7 +12,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @Table("tweets")
 public class Tweet {
-    
+
     @Id
     @Column("id")
     private Integer id;
@@ -22,5 +22,5 @@ public class Tweet {
 
     @Column("content")
     private String description;
-    
+
 }

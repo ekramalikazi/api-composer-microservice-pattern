@@ -2,7 +2,7 @@ function LoadPostsData() {
     this.source = null;
     this.start = function () {
         let postsTable = document.getElementById("results");
-        this.source = new EventSource("/posts/foo2");
+        this.source = new EventSource("/posts/sse");
         this.source.addEventListener("message", function (event) {
             // These events are JSON, so parsing.
             let r = JSON.parse(event.data);

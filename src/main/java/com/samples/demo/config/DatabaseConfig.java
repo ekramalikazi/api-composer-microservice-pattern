@@ -17,12 +17,10 @@ import org.springframework.transaction.ReactiveTransactionManager;
 @EnableR2dbcRepositories
 public class DatabaseConfig extends AbstractR2dbcConfiguration {
 
-
     @Bean
     public ReactiveTransactionManager transactionManager(ConnectionFactory connectionFactory) {
         return new R2dbcTransactionManager(connectionFactory);
     }
-
 
     @Override
     public ConnectionFactory connectionFactory() {
